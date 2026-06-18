@@ -1,5 +1,7 @@
 node_modules/
 dist/
+base44-export/.npm-cache/
+live-index.css
 .env
 .env.*
 !.env.example

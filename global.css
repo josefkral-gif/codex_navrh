@@ -1,0 +1,549 @@
+/*
+  EKOS global CSS system for WordPress Elementor Pro.
+  Source: frontend reconstruction from the public Base44 site.
+  Last checked against Base44 public CSS bundle: index-CELciolP.css, 2026-06-04.
+  Scope reusable styles with ekos-* classes. Keep section-specific CSS separate.
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap");
+
+/* Root variables */
+:root {
+  --ekos-font-primary: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --ekos-font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+
+  --ekos-background: #1c1f26;
+  --ekos-foreground: #ebebeb;
+  --ekos-card: #252830;
+  --ekos-card-strong: #272a33;
+  --ekos-primary: rgb(85, 255, 0);
+  --ekos-primary-foreground: #0a0a0a;
+  --ekos-accent: #ff5f1f;
+  --ekos-accent-soft: #ff8b4f;
+  --ekos-muted: #323540;
+  --ekos-muted-foreground: #909299;
+  --ekos-border: #363a45;
+  --ekos-input: #363a45;
+  --ekos-ring: #55ff00;
+  --ekos-white: #ffffff;
+  --ekos-black: #0a0a0a;
+  --ekos-primary-hover: rgba(85, 255, 0, 0.9);
+
+  --ekos-glass-background: rgba(37, 40, 48, 0.72);
+  --ekos-glass-background-strong: rgba(37, 40, 48, 0.88);
+  --ekos-glass-border: rgba(235, 235, 235, 0.1);
+  --ekos-glass-blur: 4px;
+  --ekos-glass-blur-strong: 14px;
+
+  --ekos-gradient-hero: linear-gradient(to bottom, transparent 0%, rgba(28, 31, 38, 0.6) 50%, #1c1f26 100%);
+  --ekos-gradient-card: linear-gradient(to top, #1c1f26 0%, rgba(28, 31, 38, 0.4) 50%, transparent 100%);
+  --ekos-gradient-accent: linear-gradient(135deg, #ff5f1f, #ff8b4f);
+
+  --ekos-radius-xs: 2px;
+  --ekos-radius-sm: 4px;
+  --ekos-radius-md: 6px;
+  --ekos-radius-lg: 8px;
+
+  --ekos-shadow-sm: 0 8px 24px rgba(0, 0, 0, 0.18);
+  --ekos-shadow-md: 0 18px 48px rgba(0, 0, 0, 0.28);
+  --ekos-shadow-primary: 0 0 28px rgba(85, 255, 0, 0.18);
+
+  --ekos-sidebar-background: #171a20;
+  --ekos-sidebar-foreground: var(--ekos-foreground);
+  --ekos-sidebar-primary: var(--ekos-primary);
+  --ekos-sidebar-accent: #2b2e37;
+  --ekos-sidebar-border: var(--ekos-border);
+
+  --ekos-container-max: 1280px;
+  --ekos-container-wide: 1440px;
+  --ekos-section-padding-y: 96px;
+  --ekos-section-padding-y-lg: 128px;
+  --ekos-section-padding-y-sm: 64px;
+  --ekos-gutter: 24px;
+
+  --ekos-space-1: 4px;
+  --ekos-space-2: 8px;
+  --ekos-space-3: 12px;
+  --ekos-space-4: 16px;
+  --ekos-space-5: 20px;
+  --ekos-space-6: 24px;
+  --ekos-space-8: 32px;
+  --ekos-space-10: 40px;
+  --ekos-space-12: 48px;
+  --ekos-space-16: 64px;
+  --ekos-space-20: 80px;
+
+  --ekos-transition-fast: 160ms ease;
+  --ekos-transition-base: 240ms ease;
+  --ekos-transition-slow: 420ms ease;
+}
+
+/* Base typography */
+.ekos-page {
+  background: var(--ekos-background);
+  color: var(--ekos-foreground);
+  font-family: var(--ekos-font-primary);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.ekos-page,
+.ekos-page * {
+  box-sizing: border-box;
+}
+
+.ekos-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.ekos-page img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.ekos-heading-xl,
+.ekos-heading-lg,
+.ekos-heading-md,
+.ekos-heading-sm {
+  color: var(--ekos-foreground);
+  font-family: var(--ekos-font-primary);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 0.98;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.ekos-heading-xl {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.ekos-heading-lg {
+  font-size: clamp(2.25rem, 4.8vw, 3.75rem);
+}
+
+.ekos-heading-md {
+  font-size: clamp(1.875rem, 3.4vw, 3rem);
+}
+
+.ekos-heading-sm {
+  font-size: clamp(1.25rem, 2.6vw, 1.875rem);
+  line-height: 1.2;
+}
+
+.ekos-text-lead {
+  color: rgba(235, 235, 235, 0.82);
+  font-size: clamp(1.0625rem, 1.6vw, 1.25rem);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.ekos-text-body {
+  color: rgba(235, 235, 235, 0.76);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.ekos-text-muted {
+  color: var(--ekos-muted-foreground);
+}
+
+.ekos-kicker,
+.ekos-section-label,
+.ekos-mono-label {
+  color: var(--ekos-primary);
+  font-family: var(--ekos-font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.ekos-accent-text {
+  background: var(--ekos-gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Layout helpers */
+.ekos-container {
+  width: min(100% - (var(--ekos-gutter) * 2), var(--ekos-container-max));
+  margin-inline: auto;
+}
+
+.ekos-container-wide {
+  width: min(100% - (var(--ekos-gutter) * 2), var(--ekos-container-wide));
+  margin-inline: auto;
+}
+
+.ekos-grid {
+  display: grid;
+  gap: var(--ekos-space-6);
+}
+
+.ekos-grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ekos-grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.ekos-grid-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.ekos-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ekos-space-6);
+}
+
+.ekos-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--ekos-space-4);
+}
+
+.ekos-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: var(--ekos-space-12);
+  align-items: center;
+}
+
+/* Section helpers */
+.ekos-section {
+  background: var(--ekos-background);
+  color: var(--ekos-foreground);
+  padding-block: var(--ekos-section-padding-y);
+  position: relative;
+}
+
+.ekos-section-sm {
+  padding-block: var(--ekos-section-padding-y-sm);
+}
+
+.ekos-section-lg {
+  padding-block: var(--ekos-section-padding-y-lg);
+}
+
+.ekos-section-muted {
+  background: var(--ekos-card-strong);
+}
+
+.ekos-section-header {
+  display: grid;
+  gap: var(--ekos-space-4);
+  margin-bottom: var(--ekos-space-12);
+  max-width: 860px;
+}
+
+.ekos-section-header-center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+/* Buttons */
+.ekos-button,
+.ekos-btn,
+.ekos-cta-button {
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: var(--ekos-radius-sm);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--ekos-font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  gap: var(--ekos-space-2);
+  justify-content: center;
+  letter-spacing: 0.15em;
+  line-height: 1;
+  min-height: 44px;
+  padding: 0.95rem 1.25rem;
+  text-transform: uppercase;
+  transition:
+    background-color var(--ekos-transition-base),
+    border-color var(--ekos-transition-base),
+    color var(--ekos-transition-base),
+    transform var(--ekos-transition-base),
+    box-shadow var(--ekos-transition-base);
+}
+
+.ekos-button-primary,
+.ekos-btn-primary,
+.ekos-cta-button {
+  background: var(--ekos-primary);
+  color: var(--ekos-primary-foreground);
+}
+
+.ekos-button-secondary,
+.ekos-btn-secondary {
+  background: transparent;
+  border-color: var(--ekos-border);
+  color: var(--ekos-foreground);
+}
+
+.ekos-button-ghost,
+.ekos-btn-ghost {
+  background: transparent;
+  color: var(--ekos-muted-foreground);
+  padding-inline: 0;
+}
+
+/* Cards */
+.ekos-card,
+.ekos-service-card {
+  background: rgba(37, 40, 48, 0.62);
+  border: 1px solid var(--ekos-border);
+  border-radius: var(--ekos-radius-md);
+  color: var(--ekos-foreground);
+  overflow: hidden;
+  transition:
+    background-color var(--ekos-transition-base),
+    border-color var(--ekos-transition-base),
+    box-shadow var(--ekos-transition-base),
+    transform var(--ekos-transition-base);
+}
+
+.ekos-card {
+  padding: var(--ekos-space-8);
+}
+
+.ekos-service-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.ekos-service-card-media {
+  aspect-ratio: 16 / 10;
+  background: var(--ekos-muted);
+  overflow: hidden;
+}
+
+.ekos-service-card-media img {
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--ekos-transition-slow);
+  width: 100%;
+}
+
+.ekos-service-card-body {
+  display: grid;
+  gap: var(--ekos-space-4);
+  padding: var(--ekos-space-6);
+}
+
+.ekos-stat {
+  display: grid;
+  gap: var(--ekos-space-1);
+}
+
+.ekos-stat-value {
+  color: var(--ekos-primary);
+  font-family: var(--ekos-font-primary);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
+
+.ekos-stat-label {
+  color: var(--ekos-muted-foreground);
+  font-family: var(--ekos-font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* Glass panels */
+.ekos-glass-panel {
+  background: var(--ekos-glass-background);
+  border: 1px solid var(--ekos-glass-border);
+  border-radius: var(--ekos-radius-md);
+  box-shadow: var(--ekos-shadow-sm);
+  -webkit-backdrop-filter: blur(var(--ekos-glass-blur));
+  backdrop-filter: blur(var(--ekos-glass-blur));
+}
+
+.ekos-glass-panel-strong {
+  background: var(--ekos-glass-background-strong);
+  box-shadow: var(--ekos-shadow-md);
+  -webkit-backdrop-filter: blur(var(--ekos-glass-blur-strong));
+  backdrop-filter: blur(var(--ekos-glass-blur-strong));
+}
+
+/* Forms */
+.ekos-form {
+  display: grid;
+  gap: var(--ekos-space-5);
+}
+
+.ekos-field {
+  display: grid;
+  gap: var(--ekos-space-2);
+}
+
+.ekos-label {
+  color: var(--ekos-muted-foreground);
+  font-family: var(--ekos-font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ekos-input,
+.ekos-textarea,
+.ekos-select {
+  background: rgba(28, 31, 38, 0.9);
+  border: 1px solid var(--ekos-input);
+  border-radius: var(--ekos-radius-sm);
+  color: var(--ekos-foreground);
+  font-family: var(--ekos-font-primary);
+  font-size: 1rem;
+  line-height: 1.4;
+  min-height: 48px;
+  padding: 0.85rem 1rem;
+  transition:
+    background-color var(--ekos-transition-base),
+    border-color var(--ekos-transition-base),
+    box-shadow var(--ekos-transition-base);
+  width: 100%;
+}
+
+.ekos-textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.ekos-input::placeholder,
+.ekos-textarea::placeholder {
+  color: rgba(144, 146, 153, 0.8);
+}
+
+.ekos-input:focus,
+.ekos-textarea:focus,
+.ekos-select:focus {
+  border-color: var(--ekos-ring);
+  box-shadow: 0 0 0 3px rgba(85, 255, 0, 0.14);
+  outline: none;
+}
+
+/* Navigation helpers */
+.ekos-nav {
+  color: var(--ekos-foreground);
+  font-family: var(--ekos-font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.ekos-nav-link {
+  color: var(--ekos-muted-foreground);
+  transition: color var(--ekos-transition-base);
+}
+
+.ekos-nav-link-active {
+  color: var(--ekos-primary);
+}
+
+/* Hover states */
+.ekos-button-primary:hover,
+.ekos-btn-primary:hover,
+.ekos-cta-button:hover {
+  background: var(--ekos-primary-hover);
+  box-shadow: var(--ekos-shadow-primary);
+  transform: translateY(-1px);
+}
+
+.ekos-button-secondary:hover,
+.ekos-btn-secondary:hover {
+  border-color: rgba(85, 255, 0, 0.5);
+  color: var(--ekos-primary);
+  transform: translateY(-1px);
+}
+
+.ekos-button-ghost:hover,
+.ekos-btn-ghost:hover,
+.ekos-nav-link:hover {
+  color: var(--ekos-primary);
+}
+
+.ekos-card:hover,
+.ekos-service-card:hover {
+  background: rgba(37, 40, 48, 0.86);
+  border-color: rgba(85, 255, 0, 0.32);
+  box-shadow: var(--ekos-shadow-sm);
+}
+
+.ekos-service-card:hover .ekos-service-card-media img {
+  transform: scale(1.045);
+}
+
+/* Elementor compatibility helpers */
+.ekos-section.e-con {
+  padding-block: var(--ekos-section-padding-y);
+}
+
+.ekos-section.e-con-boxed > .e-con-inner {
+  width: min(100% - (var(--ekos-gutter) * 2), var(--ekos-container-max));
+}
+
+.ekos-section .e-con-inner {
+  color: inherit;
+}
+
+/* Responsive rules */
+@media (max-width: 1024px) {
+  :root {
+    --ekos-section-padding-y: 80px;
+    --ekos-section-padding-y-lg: 104px;
+  }
+
+  .ekos-grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ekos-grid-3,
+  .ekos-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --ekos-gutter: 18px;
+    --ekos-section-padding-y: 64px;
+    --ekos-section-padding-y-lg: 80px;
+    --ekos-section-padding-y-sm: 48px;
+  }
+
+  .ekos-grid-2,
+  .ekos-grid-3,
+  .ekos-grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .ekos-section-header {
+    margin-bottom: var(--ekos-space-8);
+  }
+
+  .ekos-card,
+  .ekos-service-card-body {
+    padding: var(--ekos-space-6);
+  }
+
+  .ekos-button,
+  .ekos-btn,
+  .ekos-cta-button {
+    width: 100%;
+  }
+}
