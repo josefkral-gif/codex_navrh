@@ -79,6 +79,10 @@
 }
 
 /* Base typography */
+html {
+  scroll-behavior: smooth;
+}
+
 .ekos-page {
   background: var(--ekos-background);
   color: var(--ekos-foreground);
@@ -126,6 +130,8 @@
 
 .ekos-heading-md {
   font-size: clamp(1.875rem, 3.4vw, 3rem);
+  letter-spacing: 0.005em;
+  line-height: 1.12;
 }
 
 .ekos-heading-sm {
@@ -488,6 +494,41 @@
   transform: scale(1.045);
 }
 
+/* Shared replica utilities approved for global use */
+.grid-lines {
+  opacity: 0.03;
+  background-image:
+    linear-gradient(rgba(235, 235, 235, 0.5) 0.5px, transparent 0.5px),
+    linear-gradient(90deg, rgba(235, 235, 235, 0.5) 0.5px, transparent 0.5px);
+  background-size: 80px 80px;
+}
+
+.sector-capabilities {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-height var(--ekos-transition-slow),
+    opacity var(--ekos-transition-base);
+}
+
+.group:hover .sector-capabilities {
+  max-height: 12rem;
+  opacity: 1;
+  margin-top: var(--ekos-space-6);
+}
+
+.reveal {
+  animation: reveal 0.7s ease both;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+}
+
 /* Elementor compatibility helpers */
 .ekos-section.e-con {
   padding-block: var(--ekos-section-padding-y);
@@ -545,5 +586,28 @@
   .ekos-btn,
   .ekos-cta-button {
     width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-content {
+    padding-top: 8.25rem !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }

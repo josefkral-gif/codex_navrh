@@ -46,7 +46,7 @@ export default function HeroSection() {
             <br />
             <span className="text-foreground">projekty, na kter� se</span>
             <br />
-            <span className="text-foreground">m��ete <span className="text-gradient-orange">spolehnout.</span></span>
+            <span className="text-foreground">m��ete <span className="ekos-accent-text">spolehnout.</span></span>
           </motion.h1>
 
           <motion.p

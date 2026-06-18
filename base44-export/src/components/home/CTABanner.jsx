@@ -20,7 +20,7 @@ export default function CTABanner() {
           </p>
           <h2 className="font-inter font-extrabold text-3xl lg:text-5xl xl:text-6xl uppercase tracking-tight text-foreground mb-8">
             Pojďme ho<br />
-            <span className="text-gradient-orange">realizovat společně</span>
+            <span className="ekos-accent-text">realizovat společně</span>
           </h2>
           <p className="text-foreground/60 text-lg max-w-xl mx-auto mb-12 leading-relaxed">
             Popište nám svůj záměr a my vám do 48 hodin připravíme nezávaznou nabídku s technickým řešením.

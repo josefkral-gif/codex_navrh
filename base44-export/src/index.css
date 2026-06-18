@@ -124,12 +124,3 @@
   --sidebar-border: 220 10% 82%;
   --sidebar-ring: 20 100% 50%;
 }
-
-@layer utilities {
-  .text-gradient-orange {
-    background: linear-gradient(135deg,  #FF5F1F,  #FF8B4F);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-}
