@@ -12,22 +12,22 @@
   --ekos-font-primary: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --ekos-font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 
-  --ekos-background: #1c1f26;
-  --ekos-foreground: #ebebeb;
-  --ekos-card: #252830;
-  --ekos-card-strong: #272a33;
-  --ekos-primary: rgb(85, 255, 0);
+  --ekos-background: #1b2027;
+  --ekos-foreground: #f0f2f3;
+  --ekos-card: #282e37;
+  --ekos-card-strong: #242a32;
+  --ekos-primary: #48d35f;
   --ekos-primary-foreground: #0a0a0a;
   --ekos-accent: #ff5f1f;
   --ekos-accent-soft: #ff8b4f;
-  --ekos-muted: #323540;
-  --ekos-muted-foreground: #909299;
-  --ekos-border: #363a45;
-  --ekos-input: #363a45;
-  --ekos-ring: #55ff00;
+  --ekos-muted: #343b45;
+  --ekos-muted-foreground: #abb0b7;
+  --ekos-border: #454c57;
+  --ekos-input: #454c57;
+  --ekos-ring: #48d35f;
   --ekos-white: #ffffff;
   --ekos-black: #0a0a0a;
-  --ekos-primary-hover: rgba(85, 255, 0, 0.9);
+  --ekos-primary-hover: rgba(72, 211, 95, 0.92);
 
   --ekos-glass-background: rgba(37, 40, 48, 0.72);
   --ekos-glass-background-strong: rgba(37, 40, 48, 0.88);
@@ -46,7 +46,7 @@
 
   --ekos-shadow-sm: 0 8px 24px rgba(0, 0, 0, 0.18);
   --ekos-shadow-md: 0 18px 48px rgba(0, 0, 0, 0.28);
-  --ekos-shadow-primary: 0 0 28px rgba(85, 255, 0, 0.18);
+  --ekos-shadow-primary: 0 0 24px rgba(72, 211, 95, 0.16);
 
   --ekos-sidebar-background: #171a20;
   --ekos-sidebar-foreground: var(--ekos-foreground);
@@ -140,14 +140,14 @@ html {
 }
 
 .ekos-text-lead {
-  color: rgba(235, 235, 235, 0.82);
+  color: rgba(240, 242, 243, 0.86);
   font-size: clamp(1.0625rem, 1.6vw, 1.25rem);
   line-height: 1.7;
   margin: 0;
 }
 
 .ekos-text-body {
-  color: rgba(235, 235, 235, 0.76);
+  color: rgba(240, 242, 243, 0.8);
   font-size: 1rem;
   line-height: 1.7;
   margin: 0;
@@ -164,7 +164,7 @@ html {
   font-family: var(--ekos-font-mono);
   font-size: 0.75rem;
   font-weight: 500;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.18em;
   line-height: 1.35;
   text-transform: uppercase;
 }
@@ -472,7 +472,7 @@ html {
 
 .ekos-button-secondary:hover,
 .ekos-btn-secondary:hover {
-  border-color: rgba(85, 255, 0, 0.5);
+  border-color: rgba(72, 211, 95, 0.48);
   color: var(--ekos-primary);
   transform: translateY(-1px);
 }
@@ -485,8 +485,8 @@ html {
 
 .ekos-card:hover,
 .ekos-service-card:hover {
-  background: rgba(37, 40, 48, 0.86);
-  border-color: rgba(85, 255, 0, 0.32);
+  background: rgba(42, 48, 57, 0.9);
+  border-color: rgba(72, 211, 95, 0.28);
   box-shadow: var(--ekos-shadow-sm);
 }
 
@@ -577,6 +577,18 @@ html {
   .ekos-btn,
   .ekos-cta-button {
     width: 100%;
+  }
+
+  .ekos-heading-md {
+    font-size: clamp(1.6rem, 8.4vw, 2.35rem);
+    font-weight: 780;
+    letter-spacing: 0.002em;
+    line-height: 1.14;
+  }
+
+  .ekos-text-body,
+  .ekos-text-muted {
+    line-height: 1.72;
   }
 }
 
