@@ -44,11 +44,13 @@ function Header({ theme, setTheme }) {
   const closeMenu = () => setOpen(false);
   return <>
     <nav className={`fixed inset-x-0 top-0 z-50 h-16 lg:h-20 transition ${scrolled ? 'bg-background/95 border-b border-border backdrop-blur-md' : 'bg-transparent'}`}>
-      <div className="max-w-7xl mx-auto h-full px-6 lg:px-8 flex items-center">
-        <a href="#uvod"><img className="w-36" src="/assets/8937f09fb_logo-tmave.png" alt="EKOS Mimoň s.r.o." /></a>
-        <div className="hidden lg:flex items-center gap-9 ml-auto">
-          {links.map(([t, h]) => <a className="font-mono text-[11px] uppercase tracking-[.2em] text-muted-foreground hover:text-primary" href={h} key={t}>{t}</a>)}
-          <button aria-label="Přepnout barevný režim" className="text-muted-foreground hover:text-primary" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>{theme === 'dark' ? <Sun size={17}/> : <Moon size={17}/>}</button>
+      <div className="relative max-w-7xl mx-auto h-full px-6 lg:px-8 flex items-center">
+        <a href="#uvod" className="shrink-0"><img className="w-36" src="/assets/8937f09fb_logo-tmave.png" alt="EKOS Mimoň s.r.o." /></a>
+        <div className="hidden lg:flex items-center gap-10 absolute left-1/2 -translate-x-1/2">
+          {links.map(([t, h]) => <a className="font-mono text-xs font-semibold uppercase tracking-[.18em] text-foreground/85 hover:text-primary transition-colors" href={h} key={t}>{t}</a>)}
+        </div>
+        <div className="hidden lg:flex items-center gap-6 ml-auto">
+          <button aria-label="Přepnout barevný režim" className="text-foreground/70 hover:text-primary transition-colors" onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>{theme === 'dark' ? <Sun size={17}/> : <Moon size={17}/>}</button>
           <a className="px-7 py-3.5 bg-primary text-primary-foreground font-mono text-xs uppercase tracking-widest font-semibold" href="#kontakt">Poptávka</a>
         </div>
         <button aria-label="Menu" className="lg:hidden ml-auto" onClick={() => setOpen(true)}><Menu /></button>
