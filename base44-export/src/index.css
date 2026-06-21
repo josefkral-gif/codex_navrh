@@ -9,25 +9,25 @@
     --font-inter: 'Inter', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
 
-    --background: 220 15% 13%;
-    --foreground: 0 0% 92%;
-    --card: 220 12% 17%;
+    --background: 211 24% 11%;
+    --foreground: 210 22% 96%;
+    --card: 214 18% 17%;
     --card-foreground: 0 0% 92%;
     --popover: 220 12% 17%;
     --popover-foreground: 0 0% 92%;
-    --primary: 101 100% 50%;
+    --primary: 131 59% 53%;
     --primary-foreground: 0 0% 4%;
-    --secondary: 220 12% 18%;
+    --secondary: 215 18% 21%;
     --secondary-foreground: 0 0% 92%;
-    --muted: 220 10% 22%;
-    --muted-foreground: 220 5% 60%;
+    --muted: 211 16% 26%;
+    --muted-foreground: 214 11% 74%;
     --accent: 20 100% 56%;
     --accent-foreground: 0 0% 4%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 220 10% 24%;
-    --input: 220 10% 24%;
-    --ring: 101 100% 50%;
+    --border: 212 12% 36%;
+    --input: 212 12% 36%;
+    --ring: 131 59% 53%;
     --chart-1: 20 100% 56%;
     --chart-2: 210 40% 50%;
     --chart-3: 45 80% 55%;
@@ -36,12 +36,12 @@
     --radius: 0.25rem;
     --sidebar-background: 220 15% 11%;
     --sidebar-foreground: 0 0% 92%;
-    --sidebar-primary: 101 100% 50%;
+    --sidebar-primary: 131 59% 53%;
     --sidebar-primary-foreground: 0 0% 4%;
     --sidebar-accent: 220 12% 20%;
     --sidebar-accent-foreground: 0 0% 92%;
-    --sidebar-border: 220 10% 24%;
-    --sidebar-ring: 101 100% 50%;
+    --sidebar-border: 212 12% 36%;
+    --sidebar-ring: 131 59% 53%;
   }
 
   * {
@@ -60,25 +60,25 @@
 
 /* Dark theme — stejné hodnoty jako :root (výchozí tmavý styl) */
 .dark {
-  --background: 220 15% 13%;
-  --foreground: 0 0% 92%;
-  --card: 220 12% 17%;
+  --background: 211 24% 11%;
+  --foreground: 210 22% 96%;
+  --card: 214 18% 17%;
   --card-foreground: 0 0% 92%;
   --popover: 220 12% 17%;
   --popover-foreground: 0 0% 92%;
-  --primary: 101 100% 50%;
+  --primary: 131 59% 53%;
   --primary-foreground: 0 0% 4%;
-  --secondary: 220 12% 18%;
+  --secondary: 215 18% 21%;
   --secondary-foreground: 0 0% 92%;
-  --muted: 220 10% 22%;
-  --muted-foreground: 220 5% 60%;
+  --muted: 211 16% 26%;
+  --muted-foreground: 214 11% 74%;
   --accent: 20 100% 56%;
   --accent-foreground: 0 0% 4%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
-  --border: 220 10% 24%;
-  --input: 220 10% 24%;
-  --ring: 101 100% 50%;
+  --border: 212 12% 36%;
+  --input: 212 12% 36%;
+  --ring: 131 59% 53%;
   --chart-1: 20 100% 56%;
   --chart-2: 210 40% 50%;
   --chart-3: 45 80% 55%;
@@ -86,12 +86,12 @@
   --chart-5: 280 60% 55%;
   --sidebar-background: 220 15% 11%;
   --sidebar-foreground: 0 0% 92%;
-  --sidebar-primary: 101 100% 50%;
+  --sidebar-primary: 131 59% 53%;
   --sidebar-primary-foreground: 0 0% 4%;
   --sidebar-accent: 220 12% 20%;
   --sidebar-accent-foreground: 0 0% 92%;
-  --sidebar-border: 220 10% 24%;
-  --sidebar-ring: 101 100% 50%;
+  --sidebar-border: 212 12% 36%;
+  --sidebar-ring: 131 59% 53%;
 }
 
 /* Light theme */
