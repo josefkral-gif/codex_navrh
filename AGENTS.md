@@ -5,10 +5,10 @@
 These instructions apply only to:
 
 ```text
-C:\CodexWorkspace\20-websites\ekos-mimon-variant-b
+C:\CodexWorkspace\20-websites\codex_navrh
 ```
 
-Global rules from `C:\Users\theod\.codex\AGENTS.md` also apply.
+Global rules from `C:\Users\Adelka\.codex\AGENTS.md` also apply.
 
 ## Sources of Truth
 
@@ -24,7 +24,8 @@ Before substantial work, read:
 - `docs/CURRENT_SITE_AUDIT.md`
 - `docs/SEO.md`
 - `docs/QA_CHECKLIST.md`
-- docs/TROUBLESHOOTING.md`r`n- `docs/DECISIONS.md`
+- `docs/TROUBLESHOOTING.md`
+- `docs/DECISIONS.md`
 
 If essential information is missing, stop the affected work and ask focused questions.
 

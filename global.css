@@ -854,17 +854,17 @@ html {
 /* Typography palette: role-based heading controls. */
 :root {
   --ekos-section-heading-font: "Inter", "Helvetica Neue", Arial, sans-serif;
-  --ekos-section-heading-size: clamp(1.95rem, 3.15vw, 2.75rem);
-  --ekos-section-heading-weight: 460;
+  --ekos-section-heading-size: clamp(1.75rem, 2.9vw, 2.45rem);
+  --ekos-section-heading-weight: 360;
   --ekos-feature-heading-font: "Inter", "Helvetica Neue", Arial, sans-serif;
-  --ekos-feature-heading-size: clamp(1.5rem, 2.55vw, 2.15rem);
-  --ekos-feature-heading-weight: 520;
+  --ekos-feature-heading-size: clamp(1.35rem, 2.2vw, 1.85rem);
+  --ekos-feature-heading-weight: 420;
   --ekos-card-heading-font: "Inter", "Helvetica Neue", Arial, sans-serif;
   --ekos-card-heading-size: 1.05rem;
-  --ekos-card-heading-weight: 520;
-  --ekos-small-heading-font: "IBM Plex Mono", "Roboto Mono", var(--ekos-font-mono);
+  --ekos-card-heading-weight: 420;
+  --ekos-small-heading-font: "Inter", "Helvetica Neue", Arial, sans-serif;
   --ekos-small-heading-size: 0.84rem;
-  --ekos-small-heading-weight: 520;
+  --ekos-small-heading-weight: 420;
   --ekos-meta-heading-font: "IBM Plex Mono", "Roboto Mono", var(--ekos-font-mono);
   --ekos-meta-heading-size: 0.75rem;
   --ekos-meta-heading-weight: 500;
@@ -873,7 +873,7 @@ html {
   --ekos-body-text-weight: 400;
   --ekos-menu-font: "IBM Plex Mono", "Roboto Mono", var(--ekos-font-mono);
   --ekos-menu-size: 0.8125rem;
-  --ekos-menu-weight: 500;
+  --ekos-menu-weight: 400;
   --ekos-footer-font: "Inter", "Helvetica Neue", Arial, sans-serif;
   --ekos-footer-size: 0.875rem;
   --ekos-footer-weight: 400;

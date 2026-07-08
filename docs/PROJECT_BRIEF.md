@@ -4,9 +4,9 @@
 
 - Project name: EKOS Mimoň Variant B
 - Project type: Corporate B2B website redesign variant
-- Project root: `C:\CodexWorkspace\20-websites\ekos-mimon-variant-b`
+- Project root: `C:\CodexWorkspace\20-websites\codex_navrh`
 - Status: In preparation
-- Last updated: 2026-07-04
+- Last updated: 2026-07-08
 
 ## Purpose
 

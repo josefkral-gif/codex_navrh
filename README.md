@@ -6,7 +6,7 @@ Redesign variant of a corporate B2B website.
 
 ## Active Instructions
 
-- Global: `C:\Users\theod\.codex\AGENTS.md`
+- Global: `C:\Users\Adelka\.codex\AGENTS.md`
 - Project: `AGENTS.md`
 
 ## Documentation
@@ -28,19 +28,24 @@ Nevkládej sem detailní záznamy jednotlivých chyb.
 
 ## Technology Stack
 
-- Framework: [PLACEHOLDER — TO BE CONFIRMED]
-- Package manager: [PLACEHOLDER — TO BE CONFIRMED]
-- Node/runtime version: [PLACEHOLDER — TO BE CONFIRMED]
+- Framework: React 18 + Vite 6 application in `base44-export`.
+- Package manager: npm (`base44-export/package-lock.json` is present).
+- Runtime: Node.js project; exact local Node version is not pinned in project files.
 
 ## Commands
 
-- Install: `[PLACEHOLDER — VERIFY FROM PROJECT]`
-- Run: `[PLACEHOLDER — VERIFY FROM PROJECT]`
-- Lint: `[PLACEHOLDER — VERIFY FROM PROJECT]`
-- Test: `[PLACEHOLDER — VERIFY FROM PROJECT]`
-- Build: `[PLACEHOLDER — VERIFY FROM PROJECT]`
+Run from `base44-export`:
 
-Do not invent commands. Update this file only after verification from project files.
+```powershell
+npm install
+npm run dev
+npm run lint
+npm run typecheck
+npm run build
+npm run preview
+```
+
+No dedicated test script is defined in `base44-export/package.json`.
 
 ## Repository Structure
 
@@ -48,10 +53,13 @@ Do not invent commands. Update this file only after verification from project fi
 .
 ├── AGENTS.md
 ├── README.md
+├── assets
+├── base44-export
 ├── docs
-├── public
+├── global.css
+├── index.html
 ├── src
-└── tests
+└── styles.css
 ```
 
 ## Current Status
