@@ -1,65 +1,219 @@
 <!doctype html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="EKOS Mimoň - průmyslová výroba, montáž a servis.">
-  <title>EKOS Mimoň | Technická řešení</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="EKOS Mimoň – technická výroba, svařované konstrukce a zakázková spolupráce pro průmyslové projekty.">
+  <meta name="theme-color" content="#0d1513">
+  <title>EKOS Mimoň | Technická výroba a svařované konstrukce</title>
+  <link rel="preload" as="image" href="assets/ekos-hero-welding-right-1920x800.jpg">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="logo" href="#uvod" aria-label="EKOS Mimoň"><img src="assets/logo.png" alt="EKOS Mimoň"></a>
-    <button class="menu-toggle" aria-label="Otevřít menu" aria-expanded="false">MENU</button>
-    <nav class="nav" aria-label="Hlavní navigace">
-      <a href="#uvod">Úvod</a><a href="#sluzby">Služby</a><a href="#o-nas">O nás</a><a href="#kontakt">Kontakt</a>
-    </nav>
-    <a class="button button-small" href="#kontakt">Poptávka</a>
+  <a class="skip-link" href="#hlavni-obsah">Přejít na hlavní obsah</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="logo" href="#uvod" aria-label="EKOS Mimoň – úvod">
+        <img src="assets/logo.png" width="145" height="52" alt="EKOS Mimoň">
+      </a>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Hlavní navigace" data-nav>
+        <a href="#uvod">Úvod</a>
+        <a href="#vyroba">Výroba</a>
+        <a href="#realizace">Realizace</a>
+        <a href="#spolecnost">O společnosti</a>
+        <a href="#spoluprace">Spolupráce</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+
+      <a class="button button--header" href="mailto:info@ekos-mimon.cz?subject=Poptávka%20projektu">Poptávka projektu</a>
+      <button class="nav-toggle" type="button" aria-label="Otevřít menu" aria-controls="primary-nav" aria-expanded="false" data-nav-toggle>
+        <svg aria-hidden="true"><use href="assets/lucide-icons.svg#menu"></use></svg>
+      </button>
+    </div>
   </header>
 
-  <main>
-    <section class="hero" id="uvod">
-      <img class="hero-bg" src="assets/hero.png" alt="Průmyslová výrobní hala EKOS Mimoň">
-      <div class="hero-shade"></div>
-      <div class="hero-content wrap">
-        <p class="eyebrow">1994 <span></span> 30+ let zkušeností</p>
-        <h1>Pomáháme řešit projekty, na které se <em>můžete spolehnout.</em></h1>
-        <p class="lead">Spolehlivý partner pro průmyslové, komunální i zakázkové projekty. Od návrhu přes výrobu až po montáž a servis.</p>
-        <div class="actions"><a class="button" href="#kontakt">Zahájit poptávku</a><a class="text-link" href="#sluzby">Naše služby <b>↗</b></a></div>
-      </div>
-      <div class="stats wrap"><div><strong>30+</strong><span>let praxe</span></div><div><strong>500+</strong><span>realizací</span></div><div><strong>100%</strong><span>české řešení</span></div></div>
-    </section>
-
-    <section class="section sectors">
-      <div class="wrap">
-        <p class="eyebrow dark">Pro koho pracujeme</p><h2>Specializace<br><em>podle sektoru</em></h2>
-        <div class="sector-grid" id="sector-grid"></div>
+  <main id="hlavni-obsah">
+    <section class="hero" id="uvod" aria-labelledby="hero-title">
+      <img class="hero-media" src="assets/ekos-hero-welding-right-1920x800.jpg" alt="" fetchpriority="high">
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 id="hero-title">POMÁHÁME ŘEŠIT PROJEKTY, NA KTERÉ SE MŮŽETE SPOLEHNOUT.</h1>
+          <p>Spolehlivý partner pro průmyslovou výrobu, montáže a servis technologií. Od svařovaných konstrukcí a tlakových nádob po vzduchotechniku, elektromontáže a zakázkovou kovovýrobu.</p>
+          <div class="hero-actions">
+            <a class="button" href="mailto:info@ekos-mimon.cz?subject=Poptávka%20projektu">Poptat projekt <svg aria-hidden="true"><use href="assets/lucide-icons.svg#arrow-right"></use></svg></a>
+            <a class="button button--outline" href="#vyroba">Naše výrobní možnosti</a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section services" id="sluzby">
-      <div class="wrap">
-        <div class="section-head"><div><p class="eyebrow">Naše služby</p><h2>Technické<br><em>specifikace</em></h2></div><p>Od jednotlivých komponentů po kompletní technologické celky. Navrhujeme, vyrábíme, montujeme a servisujeme.</p></div>
-        <div class="service-grid" id="service-grid"></div>
+    <section class="proof-strip" aria-label="Základní fakta o EKOS Mimoň">
+      <div class="container proof-strip__inner">
+        <div class="proof-strip__item">
+          <strong class="proof-strip__value">30+</strong>
+          <span class="proof-strip__label">Let praxe</span>
+        </div>
+        <div class="proof-strip__item">
+          <strong class="proof-strip__value">500+</strong>
+          <span class="proof-strip__label">Realizací</span>
+        </div>
+        <div class="proof-strip__item">
+          <strong class="proof-strip__value">100&nbsp;%</strong>
+          <span class="proof-strip__label">České řešení</span>
+          <span class="proof-strip__meta">Mimoň, Liberecký kraj</span>
+        </div>
       </div>
     </section>
 
-    <section class="section process">
-      <div class="wrap"><p class="eyebrow dark">Jak pracujeme</p><h2>Od konzultace<br><em>po realizaci</em></h2><div class="process-grid" id="process-grid"></div></div>
+    <section class="section capabilities" id="vyroba" aria-labelledby="capabilities-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">Výrobní program</span>
+            <h2 id="capabilities-title">Výrobní možnosti</h2>
+          </div>
+          <a class="section-link" href="mailto:info@ekos-mimon.cz?subject=Dotaz%20na%20výrobní%20možnosti">Probrat výrobní možnosti <svg aria-hidden="true"><use href="assets/lucide-icons.svg#arrow-right"></use></svg></a>
+        </div>
+
+        <div class="production-capabilities__layout">
+          <figure class="production-capabilities__media">
+            <img src="assets/service-3.png" alt="Výrobní možnosti EKOS Mimoň – svařování a kovovýroba" loading="lazy">
+          </figure>
+
+          <div class="production-capabilities__side">
+            <article class="production-card">
+              <h3>Svařované konstrukce</h3>
+              <p>Rámy, lávky, podpěry, kryty a další ocelové konstrukce podle výkresu nebo provozních požadavků.</p>
+            </article>
+
+            <article class="production-card">
+              <h3>Tlakové nádoby</h3>
+              <p>Výroba, úpravy a opravy tlakových zařízení včetně dokumentace, kontroly a servisní podpory.</p>
+            </article>
+          </div>
+
+          <div class="production-capabilities__bottom">
+            <article class="production-card">
+              <h3>Vzduchotechnika</h3>
+              <p>Dodávky částí vzduchotechnických tras, napojení na technologii a servis provozních systémů.</p>
+            </article>
+
+            <article class="production-card">
+              <h3>Opravy a údržba</h3>
+              <p>Servisní zásahy, rekonstrukce, výměny opotřebených částí a úpravy zařízení podle stavu provozu.</p>
+            </article>
+
+            <article class="production-card">
+              <h3>Zakázková kovovýroba</h3>
+              <p>Jednotlivé kusy i menší série: držáky, kryty, přípravky, stojany, zábradlí a technické sestavy.</p>
+            </article>
+
+            <article class="production-card">
+              <h3>Elektromontáže</h3>
+              <p>Elektromontážní práce pro výrobní provozy, technologické celky a napojení zařízení včetně přípravy rozvodů.</p>
+            </article>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="about" id="o-nas">
-      <div class="about-image"><img src="assets/about.png" alt="Precizní svařování v dílnách EKOS Mimoň"><div class="experience"><strong>30+</strong><span>let na trhu</span></div></div>
-      <div class="about-copy"><p class="eyebrow">O firmě</p><h2>Stabilní partner<br><em>s prověřenou praxí</em></h2><p>EKOS Mimoň s.r.o. je česká technická a výrobní firma s více než třicetiletou tradicí. Specializujeme se na výrobu ocelových konstrukcí, tlakových nádob, vzduchotechniky a technologií pro čistírny odpadních vod.</p><p>Naše dílny zvládají projekty od kusové výroby po komplexní technologické celky. Pracujeme podle platných norem, s důrazem na kvalitu, přesnost a spolehlivost.</p><div class="checks"><span>✓ Certifikovaná výroba</span><span>✓ Ověřená kvalita</span><span>✓ Zkušený tým</span></div></div>
+    <section class="section realizations" id="realizace" aria-labelledby="realizations-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="kicker">Přehled výstupů</span>
+            <h2 id="realizations-title">Vybrané realizace</h2>
+          </div>
+          <p class="section-note">Ilustrační přehled typů výroby. Před publikací doplnit ověřené fotografie a údaje konkrétních zakázek.</p>
+        </div>
+
+        <div class="realization-grid">
+          <article class="realization-card">
+            <img src="assets/service-1.png" alt="Ilustrační ocelová konstrukce" loading="lazy">
+            <div class="realization-body"><h3>Ocelové konstrukce</h3><div class="meta"><span>Konstrukce</span><span>Zakázková výroba</span></div><p>Výroba konstrukčních celků a podsestav podle technického zadání.</p><a href="mailto:info@ekos-mimon.cz?subject=Poptávka%20–%20ocelové%20konstrukce">Poptat podobné řešení <span aria-hidden="true">→</span></a></div>
+          </article>
+          <article class="realization-card">
+            <img src="assets/service-2.png" alt="Ilustrační průmyslový tlakový celek" loading="lazy">
+            <div class="realization-body"><h3>Průmyslové celky</h3><div class="meta"><span>Výroba</span><span>Montáž</span></div><p>Kompletní výroba sestav včetně návazné kompletace a kontroly.</p><a href="mailto:info@ekos-mimon.cz?subject=Poptávka%20–%20průmyslový%20celek">Poptat podobné řešení <span aria-hidden="true">→</span></a></div>
+          </article>
+          <article class="realization-card">
+            <img src="assets/service-3.png" alt="Ilustrační plechové technologické díly" loading="lazy">
+            <div class="realization-body"><h3>Strojní díly a přípravky</h3><div class="meta"><span>Díly</span><span>Dokumentace</span></div><p>Výroba jednotlivých dílů a přípravků pro průmyslové použití.</p><a href="mailto:info@ekos-mimon.cz?subject=Poptávka%20–%20strojní%20díly">Poptat podobné řešení <span aria-hidden="true">→</span></a></div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section class="cta" id="kontakt">
-      <div class="wrap cta-grid"><div><p class="eyebrow">Máte technický projekt?</p><h2>Pojďme ho<br><em>realizovat společně</em></h2><p>Popište nám svůj záměr a my vám připravíme nezávazný návrh technického řešení.</p></div>
-      <form class="contact-form" id="contact-form"><label>Jméno a firma<input name="name" required></label><label>E-mail<input type="email" name="email" required></label><label>Telefon<input type="tel" name="phone"></label><label>Popis projektu<textarea name="message" rows="4" required></textarea></label><button class="button" type="submit">Odeslat poptávku</button><p class="form-status" role="status"></p></form></div>
+    <section class="section industries" id="obory" aria-labelledby="industries-title">
+      <div class="container">
+        <span class="kicker kicker--light">Oblasti spolupráce</span>
+        <h2 id="industries-title">Pro koho pracujeme</h2>
+        <div class="industry-grid">
+          <article><svg aria-hidden="true"><use href="assets/lucide-icons.svg#factory"></use></svg><h3>Průmyslová výroba</h3><p>Výrobní firmy, zařízení a technologické celky.</p></article>
+          <article><svg aria-hidden="true"><use href="assets/lucide-icons.svg#settings"></use></svg><h3>Strojírenství</h3><p>Díly, konstrukce a podsestavy pro strojní projekty.</p></article>
+          <article><svg aria-hidden="true"><use href="assets/lucide-icons.svg#landmark"></use></svg><h3>Stavebnictví</h3><p>Ocelové konstrukce a technické výrobní celky.</p></article>
+          <article><svg aria-hidden="true"><use href="assets/lucide-icons.svg#tractor"></use></svg><h3>Technické provozy</h3><p>Zakázková výroba, montáže a dlouhodobá kooperace.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process" id="spoluprace" aria-labelledby="process-title">
+      <div class="container">
+        <span class="kicker">Od zadání k dodání</span>
+        <h2 id="process-title">Jak probíhá spolupráce</h2>
+        <div class="process-grid">
+          <article class="process-step"><span class="step-number">01</span><div class="step-icon"><svg aria-hidden="true"><use href="assets/lucide-icons.svg#message-square"></use></svg></div><h3>Poptávka</h3><p>Pošlete zadání, výkresovou dokumentaci nebo popis požadavku.</p></article>
+          <article class="process-step"><span class="step-number">02</span><div class="step-icon"><svg aria-hidden="true"><use href="assets/lucide-icons.svg#clipboard-list"></use></svg></div><h3>Technické posouzení</h3><p>Prověříme proveditelnost, rozsah a návazné požadavky.</p></article>
+          <article class="process-step"><span class="step-number">03</span><div class="step-icon"><svg aria-hidden="true"><use href="assets/lucide-icons.svg#settings"></use></svg></div><h3>Výroba a kontrola</h3><p>Zakázka prochází výrobou a průběžnou kontrolou.</p></article>
+          <article class="process-step"><span class="step-number">04</span><div class="step-icon"><svg aria-hidden="true"><use href="assets/lucide-icons.svg#truck"></use></svg></div><h3>Dodání</h3><p>Hotové díly nebo celky předáme podle dohodnutého postupu.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="spolecnost" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-media"><img src="assets/about.png" alt="Ilustrační záběr technického posouzení výkresové dokumentace" loading="lazy"></div>
+        <div class="about-copy">
+          <span class="kicker">Výrobní partner z Mimoně</span>
+          <h2 id="about-title">O společnosti EKOS Mimoň</h2>
+          <p>EKOS Mimoň je partner pro technické zakázky, svařované konstrukce a průmyslové celky. Rozsah výroby i další postup posuzujeme podle konkrétního zadání.</p>
+          <ul class="about-list">
+            <li><svg aria-hidden="true"><use href="assets/lucide-icons.svg#check"></use></svg>Technické posouzení před zahájením výroby</li>
+            <li><svg aria-hidden="true"><use href="assets/lucide-icons.svg#check"></use></svg>Výroba podle dodané dokumentace a požadavků</li>
+            <li><svg aria-hidden="true"><use href="assets/lucide-icons.svg#check"></use></svg>Průběžná komunikace a kontrola zakázky</li>
+          </ul>
+          <a class="button button--outline-light" href="mailto:info@ekos-mimon.cz?subject=Dotaz%20na%20společnost%20EKOS">Napsat společnosti <svg aria-hidden="true"><use href="assets/lucide-icons.svg#arrow-right"></use></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta" id="kontakt" aria-labelledby="cta-title">
+      <div class="container final-cta-inner">
+        <div><h2 id="cta-title">Máte projekt nebo poptávku?</h2><p>Pošlete zadání nebo výkresovou dokumentaci. Navrhneme další postup technického posouzení.</p></div>
+        <div class="cta-actions">
+          <a class="button" href="mailto:info@ekos-mimon.cz?subject=Poptávka%20projektu">Poptat projekt</a>
+          <a class="button button--outline" href="tel:+420736633884"><svg aria-hidden="true"><use href="assets/lucide-icons.svg#phone"></use></svg>+420 736 633 884</a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer><div class="wrap footer-grid"><div><img src="assets/logo.png" alt="EKOS Mimoň"><p>Spolehlivý partner pro technické projekty od návrhu přes výrobu až po montáž a servis.</p></div><div><b>Kontakt</b><p>Křížová 456, 471 24 Mimoň</p><a href="tel:+420736633884">+420 736 633 884</a><a href="mailto:info@ekos-mimon.cz">info@ekos-mimon.cz</a></div><div><b>Navigace</b><a href="#uvod">Úvod</a><a href="#sluzby">Služby</a><a href="#o-nas">O nás</a></div></div><div class="copyright wrap">© 2026 EKOS Mimoň s.r.o. <span>IČO: 25418891 · DIČ: CZ25418891</span></div></footer>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.png" width="132" height="47" alt="EKOS Mimoň">
+        <p>EKOS Mimoň s.r.o.<br>Křížová 456<br>471 24 Mimoň</p>
+      </div>
+      <div><h2>Rychlé odkazy</h2><a href="#vyroba">Výroba</a><a href="#realizace">Realizace</a><a href="#spolecnost">O společnosti</a><a href="#spoluprace">Spolupráce</a></div>
+      <div><h2>Výrobní možnosti</h2><a href="#vyroba">Obrábění</a><a href="#vyroba">Zpracování plechu</a><a href="#vyroba">Svařování</a><a href="#vyroba">Montáže a celky</a></div>
+      <div><h2>Kontakt</h2><a class="contact-link" href="tel:+420736633884"><svg aria-hidden="true"><use href="assets/lucide-icons.svg#phone"></use></svg>+420 736 633 884</a><a class="contact-link" href="mailto:info@ekos-mimon.cz"><svg aria-hidden="true"><use href="assets/lucide-icons.svg#mail"></use></svg>info@ekos-mimon.cz</a><p class="contact-link"><svg aria-hidden="true"><use href="assets/lucide-icons.svg#map-pin"></use></svg>Mimoň, Liberecký kraj</p></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 EKOS Mimoň s.r.o.</span><span>IČO: 25418891 · DIČ: CZ25418891</span></div>
+  </footer>
+
   <script src="app.js"></script>
 </body>
 </html>
